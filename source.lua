@@ -289,26 +289,26 @@ function Library:Create(name, description)
        function Elements:BoxToggle(name, callback)
             name = name or "BoxToggle"
             callback = callback or function() end
+            local bool = false
+
             local BoxToggle = Instance.new("Frame")
             local Box = Instance.new("TextBox")
             local ToggleButton = Instance.new("TextButton")
 
-            local bool = false
-
             BoxToggle.Name = "BoxToggle"
-            BoxToggle.Parent = Page
+            BoxToggle.Parent = game.StarterGui.Main.MainFrame.Page
             BoxToggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
             BoxToggle.BackgroundTransparency = 0.980
             BoxToggle.BorderSizePixel = 0
-            BoxToggle.Position = UDim2.new(0, 0, 0.28125, 0)
-            BoxToggle.Size = UDim2.new(0, 356, 0, 22)
+            BoxToggle.Position = UDim2.new(0, 0, 0.421875, 0)
+            BoxToggle.Size = UDim2.new(0, 381, 0, 22)
 
             Box.Name = "Box"
             Box.Parent = BoxToggle
             Box.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             Box.BackgroundTransparency = 0.995
             Box.BorderSizePixel = 0
-            Box.Size = UDim2.new(0, 356, 0, 22)
+            Box.Size = UDim2.new(0, 381, 0, 22)
             Box.Font = Enum.Font.Gotham
             Box.Text = ""
             Box.PlaceholderText = name
@@ -316,6 +316,19 @@ function Library:Create(name, description)
             Box.TextSize = 19.000
             Box.TextTransparency = 0.200
             Box.TextWrapped = true
+
+            ToggleButton.Name = "ToggleButton"
+            ToggleButton.Parent = BoxToggle
+            ToggleButton.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            ToggleButton.BorderSizePixel = 0
+            ToggleButton.Position = UDim2.new(1.01910985, 0, 0, 0)
+            ToggleButton.Size = UDim2.new(0, 24, 0, 22)
+            ToggleButton.ZIndex = 4
+            ToggleButton.AutoButtonColor = false
+            ToggleButton.Font = Enum.Font.SourceSans
+            ToggleButton.Text = ""
+            ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+            ToggleButton.TextSize = 14.000
 
             Box.FocusLost:Connect(function()
                 callback(tonumber(Box.Text), bool)
