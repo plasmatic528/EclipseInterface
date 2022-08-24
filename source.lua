@@ -296,7 +296,7 @@ function Library:Create(name, description)
             local ToggleButton = Instance.new("TextButton")
 
             BoxToggle.Name = "BoxToggle"
-            BoxToggle.Parent = game.StarterGui.Main.MainFrame.Page
+            BoxToggle.Parent = Page
             BoxToggle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
             BoxToggle.BackgroundTransparency = 0.980
             BoxToggle.BorderSizePixel = 0
