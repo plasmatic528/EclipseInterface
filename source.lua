@@ -218,14 +218,14 @@ function Library:Create(name, description)
             Toggle.BackgroundTransparency = 0.980
             Toggle.BorderSizePixel = 0
             Toggle.Position = UDim2.new(0, 0, 0.28125, 0)
-            Toggle.Size = UDim2.new(0, 356, 0, 22)
+            Toggle.Size = UDim2.new(0, 381,0, 22)
 
             ToggleButton.Name = "ToggleButton"
             ToggleButton.Parent = Toggle
             ToggleButton.BackgroundColor3 = Color3.fromRGB(25,25,25)
             ToggleButton.BorderSizePixel = 0
-            ToggleButton.Position = UDim2.new(1.01910985, 0, 0, 0)
-            ToggleButton.Size = UDim2.new(0, 46, 0, 22)
+            ToggleButton.Position = UDim2.new(1.019, 0,0, 0)
+            ToggleButton.Size = UDim2.new(0, 24, 0, 22)
             ToggleButton.ZIndex = 4
             ToggleButton.AutoButtonColor = false
             ToggleButton.Font = Enum.Font.SourceSans
@@ -333,19 +333,6 @@ function Library:Create(name, description)
             Box.FocusLost:Connect(function()
                 callback(tonumber(Box.Text), bool)
             end)
-
-            ToggleButton.Name = "ToggleButton"
-            ToggleButton.Parent = BoxToggle
-            ToggleButton.BackgroundColor3 = Color3.fromRGB(25,25,25)
-            ToggleButton.BorderSizePixel = 0
-            ToggleButton.Position = UDim2.new(1.01910985, 0, 0, 0)
-            ToggleButton.Size = UDim2.new(0, 46, 0, 22)
-            ToggleButton.ZIndex = 4
-            ToggleButton.AutoButtonColor = false
-            ToggleButton.Font = Enum.Font.SourceSans
-            ToggleButton.Text = ""
-            ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
-            ToggleButton.TextSize = 14.000
 
             ToggleButton.MouseButton1Click:Connect(function()
                 if bool == false then
