@@ -198,6 +198,18 @@ function Library:Create(name, description)
             TextBox.TextTransparency = 0.200
             TextBox.TextWrapped = true
 
+            TextBox.MouseEnter:Connect(function()
+                game:GetService("TweenService"):Create(TextBox, TweenInfo.new(0.15), {Size = UDim2.new(0, 409,0, 32)}):Play()
+                game:GetService("TweenService"):Create(TextBox, TweenInfo.new(0.15), {BackgroundTransparency = 0.93}):Play()
+                game:GetService("TweenService"):Create(ButTextBoxton, TweenInfo.new(0.15), {TextSize = 23}):Play()
+            end)
+            
+            TextBox.MouseLeave:Connect(function()
+                game:GetService("TweenService"):Create(TextBox, TweenInfo.new(0.15), {Size = UDim2.new(0, 409,0, 22)}):Play()
+                game:GetService("TweenService"):Create(TextBox, TweenInfo.new(0.15), {BackgroundTransparency = 0.98}):Play()
+                game:GetService("TweenService"):Create(TextBox, TweenInfo.new(0.15), {TextSize = 19}):Play()
+            end)
+
             TextBox.FocusLost:Connect(function()
                 callback(TextBox.Text)
             end)
