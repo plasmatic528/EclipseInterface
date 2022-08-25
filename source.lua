@@ -254,7 +254,7 @@ function Library:Create(name, description)
             ToggleLabel.Selectable = true
             ToggleLabel.Size = UDim2.new(0, 409, 0, 22)
             ToggleLabel.Font = Enum.Font.Gotham
-            ToggleLabel.Text = "Toggle"
+            ToggleLabel.Text = name
             ToggleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
             ToggleLabel.TextSize = 19.000
 
