@@ -343,18 +343,18 @@ function Library:Create(name, description)
             ToggleButton.TextSize = 14.000
 
             Box.FocusLost:Connect(function()
-                callback(Box.Text, bool)
+                callback(Box.ContentText, bool)
             end)
 
             ToggleButton.MouseButton1Click:Connect(function()
                 if bool == false then
                     bool = true
                     game:GetService("TweenService"):Create(ToggleButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(40, 143, 212)}):Play()
-                    callback(tonumber(Box.Text), bool)
+                    callback(Box.ContentText, bool)
                 elseif bool == true then
                     bool = false
                     game:GetService("TweenService"):Create(ToggleButton, TweenInfo.new(0.2), {BackgroundColor3 = Color3.fromRGB(25,25,25)}):Play()
-                    callback(tonumber(Box.Text), bool)
+                    callback(Box.ContentText, bool)
                 end
             end)
        end
