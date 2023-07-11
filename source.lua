@@ -343,7 +343,7 @@ function Library:Create(name, description)
             ToggleButton.TextSize = 14.000
 
             Box.FocusLost:Connect(function()
-                callback(tonumber(Box.Text), bool)
+                callback(Box.Text, bool)
             end)
 
             ToggleButton.MouseButton1Click:Connect(function()
