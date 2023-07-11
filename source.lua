@@ -342,7 +342,7 @@ function Library:Create(name, description)
             ToggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
             ToggleButton.TextSize = 14.000
 
-            Box:GetPropertyChangedSignal("Text"):Connect(function()
+            Box.FocusLost:Connect(function()
                 callback(tonumber(Box.Text), bool)
             end)
 
