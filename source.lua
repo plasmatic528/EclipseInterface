@@ -56,6 +56,7 @@ function Library:Create(name, description)
     close.Position = UDim2.new(0.946673512, 0, 0, 0)
     close.Size = UDim2.new(0, 22, 0, 22)
     close.ZIndex = 2
+    close.Rotation = -360
     close.Image = "rbxassetid://3926305904"
     close.ImageColor3 = Color3.fromRGB(138, 138, 138)
     close.ImageRectOffset = Vector2.new(284, 4)
