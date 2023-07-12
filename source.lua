@@ -63,13 +63,13 @@ function Library:Create(name, description)
     close.ImageRectSize = Vector2.new(24, 24)
 
     close.MouseEnter:Connect(function()
-        game:GetService("TweenService"):Create(close, TweenInfo.new(1, Enum.EasingStyle.Bounce), {Rotation = 180}):Play()
+        game:GetService("TweenService"):Create(close, TweenInfo.new(1, Enum.EasingStyle.Elastic), {Rotation = 360}):Play()
         game:GetService("TweenService"):Create(close, TweenInfo.new(0.25), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
     end)
     
     
     close.MouseLeave:Connect(function()
-        game:GetService("TweenService"):Create(close, TweenInfo.new(1, Enum.EasingStyle.Bounce), {Rotation = 0}):Play()
+        game:GetService("TweenService"):Create(close, TweenInfo.new(1, Enum.EasingStyle.Elastic), {Rotation = 0}):Play()
         game:GetService("TweenService"):Create(close, TweenInfo.new(0.25), {ImageColor3 = Color3.fromRGB(138, 138, 138)}):Play()
     end)
 
