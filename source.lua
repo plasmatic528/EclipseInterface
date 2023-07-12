@@ -1,4 +1,4 @@
-local Library = {}
+dlocal Library = {}
 -- Library:Create(name <string>, description <string>)
 function Library:Create(name, description)
     name = name or "Hub"
@@ -56,20 +56,20 @@ function Library:Create(name, description)
     close.Position = UDim2.new(0.946673512, 0, 0, 0)
     close.Size = UDim2.new(0, 22, 0, 22)
     close.ZIndex = 2
-    close.Rotation = -360
+    close.Rotation = 0
     close.Image = "rbxassetid://3926305904"
     close.ImageColor3 = Color3.fromRGB(138, 138, 138)
     close.ImageRectOffset = Vector2.new(284, 4)
     close.ImageRectSize = Vector2.new(24, 24)
 
     close.MouseEnter:Connect(function()
-        game:GetService("TweenService"):Create(close, TweenInfo.new(1.25), {Rotation = 360}):Play()
+        game:GetService("TweenService"):Create(close, TweenInfo.new(1, Enum.EasingStyle.Bounce), {Rotation = 180}):Play()
         game:GetService("TweenService"):Create(close, TweenInfo.new(0.25), {ImageColor3 = Color3.fromRGB(255,255,255)}):Play()
     end)
     
     
     close.MouseLeave:Connect(function()
-        game:GetService("TweenService"):Create(close, TweenInfo.new(1.25), {Rotation = -360}):Play()
+        game:GetService("TweenService"):Create(close, TweenInfo.new(1, Enum.EasingStyle.Bounce), {Rotation = 0}):Play()
         game:GetService("TweenService"):Create(close, TweenInfo.new(0.25), {ImageColor3 = Color3.fromRGB(138, 138, 138)}):Play()
     end)
 
