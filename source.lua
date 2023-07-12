@@ -1,4 +1,4 @@
-dlocal Library = {}
+local Library = {}
 -- Library:Create(name <string>, description <string>)
 function Library:Create(name, description)
     name = name or "Hub"
